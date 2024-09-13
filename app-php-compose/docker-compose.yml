@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:alpine
+    port:
+      - 90:80
+    volumes:
+      - ./:/var/www/
+
+  php:
+    image: php:7.4-fpm
+    volumes:
+     - ./:/var/www/
